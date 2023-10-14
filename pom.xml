@@ -89,6 +89,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.4.1</version>
@@ -97,7 +103,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>6.19.0</version>
+            <version>6.18.0</version>
         </dependency>
 
         <dependency>
