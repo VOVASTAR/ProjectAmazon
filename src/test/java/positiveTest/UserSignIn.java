@@ -18,9 +18,10 @@ public class UserSignIn {
     @BeforeMethod
     public void before() {
 
-        Configuration.browser = "chrome";
-        ChromeOptions chromeOptions = getChromeOptions();
-        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+//        Configuration.browser = "chrome";
+//        ChromeOptions chromeOptions = getChromeOptions();
+//        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        Configuration.browser = "firefox";
         open("https://www.amazon.com/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
 
