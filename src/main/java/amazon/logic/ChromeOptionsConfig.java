@@ -6,7 +6,7 @@ public class ChromeOptionsConfig {
 
     public static UserAgent getRandomUserAgent() {
         UserAgent[] userAgent = UserAgent.values();
-        int randomIndex = (int) (Math.random() * userAgent.length + 1);
+        int randomIndex = (int) (Math.random() * userAgent.length);
         return userAgent[randomIndex];
     }
 

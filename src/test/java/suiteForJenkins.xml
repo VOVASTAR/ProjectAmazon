@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suiteForJenkins" verbose="10" parallel="tests" thread-count="4">
+
+    <test name="positive">
+        <classes>
+            <class name="positiveTest.UserSignIn"/>
+        </classes>
+    </test>
+
+    <test name="negative">
+        <classes>
+            <class name="negativeTest.IncorrectEmail"/>
+        </classes>
+    </test>
+
+</suite>
