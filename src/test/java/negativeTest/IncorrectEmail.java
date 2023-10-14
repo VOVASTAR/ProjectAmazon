@@ -33,7 +33,7 @@ public class IncorrectEmail {
                 open("https://www.amazon.com/");
                 break;
             }
-            catch(SessionNotCreatedException e)
+            catch(RuntimeException e)
             {
                 if( retryCount > MAX_RETRY_COUNT )
                 {
