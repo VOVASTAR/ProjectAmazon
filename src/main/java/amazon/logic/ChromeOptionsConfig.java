@@ -18,7 +18,7 @@ public class ChromeOptionsConfig {
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.addArguments("--ignore-certificate-errors");
         chromeOptions.addArguments("--headless");
-
+        System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\"");
 //        chromeOptions.addArguments("--log-level=INFO");
 //        chromeOptions.addArguments("--log-path=/home/vstarchevskyi/Загрузки/chromeLogJenkins/logJenkins.log.log");
 //        chromeOptions.addArguments("--log-path=logForJenkins.log");
