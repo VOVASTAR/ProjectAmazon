@@ -3,6 +3,7 @@ package negativeTest;
 import amazon.page.object.MainPageLogic;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,11 +24,14 @@ public class IncorrectEmail {
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
 
-    @Test
+    @Test()
+    @Flaky()
+    @Owner("Vova")
+    @Description("Test check alert message with incorrect email")
+    @Severity(SeverityLevel.NORMAL)
     public void checkAlertWithIncorrectEmail() {
 
         new MainPageLogic()
-//                .timeOut(10000)
                 .clickOnSignInBtn()
                 .checkTitleOfForm("Sign in")
                 .fillFieldEmailOrMobilePhone("v.starchevskyi@")
@@ -35,7 +39,11 @@ public class IncorrectEmail {
                 .checkAlertMessageEmail("We cannot find an account with that email address");
     }
 
-    @Test
+    @Test()
+    @Flaky()
+    @Owner("Vova")
+    @Description("Test check alert message near to email/phone field with empty email field")
+    @Severity(SeverityLevel.NORMAL)
     public void checkAlertWithEmptyEmailField() {
 
         new MainPageLogic()

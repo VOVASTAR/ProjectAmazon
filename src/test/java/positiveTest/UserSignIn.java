@@ -4,6 +4,7 @@ import amazon.page.object.MainPageLogic;
 import amazon.page.object.YourStorePageLogic;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -26,7 +27,11 @@ public class UserSignIn {
     }
 
 
-    @Test
+    @Test()
+    @Flaky()
+    @Owner("Vova")
+    @Description("Test check successful user login")
+    @Severity(SeverityLevel.BLOCKER)
     public void successSignInTest() {
 
         new MainPageLogic()
