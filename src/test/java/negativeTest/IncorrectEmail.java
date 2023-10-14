@@ -5,6 +5,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.*;
+import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,7 +15,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 
 public class IncorrectEmail {
-
+    private final static int MAX_RETRY_COUNT = 5;
     @BeforeMethod
     public void before() {
 
@@ -22,7 +23,40 @@ public class IncorrectEmail {
         Configuration.browser = "chrome";
         ChromeOptions chromeOptions = getChromeOptions();
         Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-        open("https://www.amazon.com/");
+
+
+        int retryCount = 0;
+        while(true)
+        {
+            try
+            {
+                open("https://www.amazon.com/");
+                break;
+            }
+            catch(SessionNotCreatedException e)
+            {
+                if( retryCount > MAX_RETRY_COUNT )
+                {
+                    throw new RuntimeException("Too many retries...", e);
+                }
+
+//                logger.warn("encountered exception : ", e);
+//                logger.warn("Trying again...");
+
+                retryCount++;
+                try
+                {
+                    Thread.sleep(2_000);
+                }
+                catch (InterruptedException interruptedException)
+                {
+                    interruptedException.printStackTrace();
+                }
+                continue;
+            }
+        }
+
+//        open("https://www.amazon.com/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
 
