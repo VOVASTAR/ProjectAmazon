@@ -18,7 +18,7 @@ public class IncorrectEmail {
     @BeforeMethod
     public void before() {
 
-        WebDriverManager.chromedriver().driverVersion("114.0.5735.133").setup();
+//        WebDriverManager.chromedriver().driverVersion("114.0.5735.133").setup();
         Configuration.browser = "chrome";
         ChromeOptions chromeOptions = getChromeOptions();
         Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
