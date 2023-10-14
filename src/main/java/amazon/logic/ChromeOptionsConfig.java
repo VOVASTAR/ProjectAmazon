@@ -1,0 +1,22 @@
+package amazon.logic;
+
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class ChromeOptionsConfig {
+
+    public static UserAgent getRandomUserAgent() {
+        UserAgent[] userAgent = UserAgent.values();
+        int randomIndex = (int) (Math.random() * userAgent.length + 1);
+        return userAgent[randomIndex];
+    }
+
+    public static ChromeOptions getChromeOptions() {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
+        chromeOptions.addArguments("--disable-features=AutomationControlled");
+        chromeOptions.addArguments("--user-agent='" + getRandomUserAgent().userAgentName + "'");
+        return chromeOptions;
+    }
+
+
+}
