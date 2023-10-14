@@ -17,10 +17,9 @@ public class IncorrectEmail {
     @BeforeMethod
     public void before() {
 
-//        Configuration.browser = "chrome";
-        Configuration.browser = "firefox";
-//        ChromeOptions chromeOptions = getChromeOptions();
-//        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        Configuration.browser = "chrome";
+        ChromeOptions chromeOptions = getChromeOptions();
+        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         open("https://www.amazon.com/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
