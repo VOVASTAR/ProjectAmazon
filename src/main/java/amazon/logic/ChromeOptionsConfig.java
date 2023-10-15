@@ -17,7 +17,7 @@ public class ChromeOptionsConfig {
         chromeOptions.addArguments("--user-agent='" + getRandomUserAgent().userAgentName + "'");
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.addArguments("--ignore-certificate-errors");
-        chromeOptions.addArguments("--headless");
+//        chromeOptions.addArguments("--headless");
         return chromeOptions;
     }
 
