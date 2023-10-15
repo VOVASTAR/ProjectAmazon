@@ -21,5 +21,4 @@ public class ChromeOptionsConfig {
         return chromeOptions;
     }
 
-
 }
