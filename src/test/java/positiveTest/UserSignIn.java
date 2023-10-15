@@ -7,6 +7,7 @@ import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static amazon.logic.ChromeOptionsConfig.getChromeOptions;
@@ -15,15 +16,15 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class UserSignIn {
 
-    @BeforeMethod
+    @BeforeTest
     public void before() {
 
-        Configuration.browser = "chrome";
-        ChromeOptions chromeOptions = getChromeOptions();
-        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+//        Configuration.browser = "chrome";
+//        ChromeOptions chromeOptions = getChromeOptions();
+//        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
         open("https://www.amazon.com/");
-        WebDriverRunner.getWebDriver().manage().window().maximize();
+//        WebDriverRunner.getWebDriver().manage().window().maximize();
 
     }
 
