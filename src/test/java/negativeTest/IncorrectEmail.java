@@ -19,8 +19,8 @@ public class IncorrectEmail {
     public void before() {
 
 //        Configuration.browser = "chrome";
-//        ChromeOptions chromeOptions = getChromeOptions();
-//        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        ChromeOptions chromeOptions = getChromeOptions();
+        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
         open("https://www.amazon.com/");
 //        WebDriverRunner.getWebDriver().manage().window().maximize();
