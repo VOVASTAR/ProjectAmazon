@@ -2,6 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="suiteForJenkins" verbose="10" parallel="tests" thread-count="4">
 
+    <listeners>
+        <listener class-name="testSuits.MyListener"/>
+    </listeners>
+
     <test name="positive">
         <classes>
             <class name="positiveTest.UserSignIn"/>
