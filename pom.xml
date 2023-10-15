@@ -40,7 +40,7 @@
                     </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>${basedir}${TEST_SUITE}.xml</suiteXmlFile>
-<!--                        <suiteXmlFile>${basedir}/src/test/java/suiteForJenkins.xml</suiteXmlFile>-->
+                        <!--                        <suiteXmlFile>${basedir}/src/test/java/suiteForJenkins.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                     <systemProperties>
                         <property>
@@ -87,12 +87,6 @@
             <artifactId>selenium-java</artifactId>
             <version>4.11.0</version>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>org.seleniumhq.selenium</groupId>-->
-<!--            <artifactId>selenium-chrome-driver</artifactId>-->
-<!--            <version>4.8.1</version>-->
-<!--        </dependency>-->
 
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
