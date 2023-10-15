@@ -8,6 +8,7 @@ import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -25,9 +26,10 @@ public class IncorrectEmail {
     public void before() {
 
 //        WebDriverManager.chromedriver().setup();
-        Configuration.browser = "chrome";
-        ChromeOptions chromeOptions = getChromeOptions();
-        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+//        Configuration.browser = "chrome";
+//        FirefoxOptions firefoxOptions = getChromeOptions();
+//        ChromeOptions chromeOptions = getChromeOptions();
+//        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
         open("https://www.amazon.com/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
