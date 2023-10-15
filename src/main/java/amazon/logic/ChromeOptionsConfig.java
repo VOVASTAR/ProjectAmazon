@@ -17,8 +17,7 @@ public class ChromeOptionsConfig {
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
         chromeOptions.addArguments("--disable-features=AutomationControlled");
-        chromeOptions.addArguments("--single-process");
-//        chromeOptions.addArguments("--user-agent='" + getRandomUserAgent().userAgentName + "'");
+        chromeOptions.addArguments("--user-agent='" + getRandomUserAgent().userAgentName + "'");
         chromeOptions.addArguments("--ignore-certificate-errors");
         return chromeOptions;
     }
