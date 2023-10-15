@@ -19,23 +19,23 @@ import static com.codeborne.selenide.Selenide.open;
 
 
 public class IncorrectEmail {
-    WebDriver driver;
-    WebDriverWait webDriverWait;
+//    WebDriver driver;
+//    WebDriverWait webDriverWait;
     @BeforeMethod
     public void before() {
 
 //        WebDriverManager.chromedriver().setup();
-//        Configuration.browser = "chrome";
-//        ChromeOptions chromeOptions = getChromeOptions();
-//        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-//
-//        open("https://www.amazon.com/");
-//        WebDriverRunner.getWebDriver().manage().window().maximize();
+        Configuration.browser = "chrome";
+        ChromeOptions chromeOptions = getChromeOptions();
+        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
-        WebDriverManager.chromedriver().setup();
-         driver = new ChromeDriver();
-         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5000));
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
+        open("https://www.amazon.com/");
+        WebDriverRunner.getWebDriver().manage().window().maximize();
+
+//        WebDriverManager.chromedriver().setup();
+//         driver = new ChromeDriver();
+//         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5000));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
 
     }
 
@@ -45,7 +45,7 @@ public class IncorrectEmail {
     @Description("Test check alert message with incorrect email")
     @Severity(SeverityLevel.NORMAL)
     public void checkAlertWithIncorrectEmail() {
-        driver.get("https://www.amazon.com/");
+//        driver.get("https://www.amazon.com/");
         new MainPageLogic()
                 .clickOnSignInBtn()
                 .checkTitleOfForm("Sign in")
