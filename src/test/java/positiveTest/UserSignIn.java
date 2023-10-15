@@ -4,7 +4,6 @@ import amazon.page.object.MainPageLogic;
 import amazon.page.object.YourStorePageLogic;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
