@@ -19,7 +19,11 @@
         <allure-testng-version>2.21.0</allure-testng-version>
         <allure-selenide-version>2.21.0</allure-selenide-version>
         <allure-rest-assured-version>2.21.0</allure-rest-assured-version>
+        <bonigarcia-webdrivermanager-version>5.4.1</bonigarcia-webdrivermanager-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <selenide-codeborne-version>6.19.0</selenide-codeborne-version>
+        <selenium-java-version>4.11.0</selenium-java-version>
+        <testng-version>7.7.0</testng-version>
     </properties>
 
 
@@ -40,7 +44,6 @@
                     </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>${basedir}${TEST_SUITE}.xml</suiteXmlFile>
-<!--                    <suiteXmlFile>${basedir}/src/test/java/suiteForJenkins.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                     <systemProperties>
                         <property>
@@ -75,25 +78,25 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.7.0</version>
+            <version>${testng-version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.11.0</version>
+            <version>${selenium-java-version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.4.1</version>
+            <version>${bonigarcia-webdrivermanager-version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>6.19.0</version>
+            <version>${selenide-codeborne-version}</version>
         </dependency>
 
         <dependency>
