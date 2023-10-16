@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public interface MainPageLocators{
+public interface MainPageLocators {
 
     SelenideElement signInBtn = $(By.id("nav-link-accountList"));
 

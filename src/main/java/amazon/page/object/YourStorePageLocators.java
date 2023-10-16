@@ -7,6 +7,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 public interface YourStorePageLocators {
 
-SelenideElement accountName = $(By.id("nav-link-accountList-nav-line-1"));
+    SelenideElement accountName = $(By.id("nav-link-accountList-nav-line-1"));
 
 }
